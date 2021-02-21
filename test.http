@@ -1,0 +1,33 @@
+### Create User
+POST http://localhost:5000/api/user HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+
+{
+  "firstname": "John",
+  "lastname": "Doe",
+  "email": "john.doe@gmail.com"
+}
+
+### List All Users
+GET http://localhost:5000/api/user HTTP/1.1
+Accept: application/json
+
+### Get User
+GET http://localhost:5000/api/user/1 HTTP/1.1
+Accept: application/json
+
+### Update User
+PATCH http://localhost:5000/api/user/1 HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+
+{
+  "firstname": "Jane",
+  "lastname": "Dae",
+  "email": "jane.dae@gmail.com"
+}
+
+### Delete User
+DELETE http://localhost:5000/api/user/1 HTTP/1.1
+Accept: application/json
