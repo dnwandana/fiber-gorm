@@ -1,19 +1,8 @@
 package config
 
-import (
-	"fmt"
-	"os"
+import "os"
 
-	"github.com/joho/godotenv"
-)
-
-// Env function to get env value from .env file
-// Read more at: https://github.com/joho/godotenv
+// Env function return env value from .env file or OS env value
 func Env(key string) string {
-	err := godotenv.Load(".env")
-	if err != nil {
-		fmt.Println("Error loading .env file")
-	}
-
 	return os.Getenv(key)
 }
